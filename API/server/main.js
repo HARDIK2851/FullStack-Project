@@ -48,7 +48,7 @@ const schema = `
 
     type Mutation {
         insertData(result: inputTypeEmp): Employee!
-        updateDataIntoMongoDB(result: inputUpdatedTypeEmp!): Employee
+        updateDataIntoMongoDB(result: inputUpdatedTypeEmp!): Employee!
         deleteData(id: String!): Boolean
     }
 `;

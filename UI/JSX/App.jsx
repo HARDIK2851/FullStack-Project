@@ -161,7 +161,7 @@ class EmployeeDirectory extends React.Component {
   updateEmployee(query, result) {
     return graphqlRequest(query, { result });
   }
-a
+  
   updateEmployeeInfo(updatedData) {
     this.setState({ employeeData: updatedData });
 }
