@@ -110,7 +110,7 @@ class EmployeeDirectory extends React.Component {
     });
   }
 
-  // this function will be called when user presses the update employee button in EmployeeUpdate Component after filling all feilds
+  // this function will be called when user presses the update employee button in EmployeeUpdate Component after filling all feilds 
   updateEmployeeData(empdata) {
     const empInfo = { ...empdata };
     console.log(empdata);
