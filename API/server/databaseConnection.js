@@ -1,7 +1,11 @@
 const { MongoClient } = require('mongodb');
 let db;
-const DB_URL = 'mongodb+srv://hmthakor2851:hardik@cluster0.clmnije.mongodb.net/?retryWrites=true&w=majority';
+require('dotenv').config();  
+ 
+const DB_URL = process.env.MONGODB_URI;
 const { ObjectId } = require('mongodb');
+ 
+
 
 
 // this function is connection the react app to Database
