@@ -48,24 +48,35 @@ async function deleteData(id) {
     }
 }
 
+
 async function updateDataIntoMongoDB(updatedEmployee) {
-    const id = updatedEmployee._id;
     try {
-        const result = await db.collection('employees').updateOne(
-            { _id: new ObjectId(id) }, // Filter for the employee to update
-            { $set: updatedEmployee } // Updated data
-        );
-        if (result.modifiedCount === 1) {   
-            return result; // Return the updated employee data
-        } else {
-            console.error('Employee not found or not updated');
+        const { _id, ...updateFields } = updatedEmployee; // Extract `_id` separately
+
+        if (!_id) {
+            console.error("Error: Missing `_id` for update.");
             return null;
         }
+
+        // Convert `_id` to `ObjectId` format
+        const filter = { _id: new ObjectId(_id) };
+        const update = { $set: updateFields };
+        const options = { returnDocument: "after" }; // Return the updated document
+
+        const result = await db.collection("employees").findOneAndUpdate(filter, update, options);
+
+        if (!result.value) {
+            console.error(`Error: Employee with ID ${_id} not found or not updated. ${JSON.stringify(updatedEmployee)}`);
+            return null;
+        }
+
+        return result.value; // Return updated employee data
     } catch (error) {
-        console.error('Error updating data into MongoDB:', error);
+        console.error("Error updating data into MongoDB:", error);
         return null;
     }
 }
+
 
 
 

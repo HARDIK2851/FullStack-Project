@@ -20,14 +20,14 @@ const schema = `
 
   input inputUpdatedTypeEmp {
     _id: String!
-    firstName: String!
-    dateOfJoining: String!
-    lastName: String!
-    age: Int!
-    title: String!
-    department: String!
-    employeeType: String!
-    currentStatus: Int
+      firstName: String!
+      dateOfJoining: String!
+      lastName: String!
+      age: Int!
+      title: String!
+      department: String!
+      employeeType: String!
+      currentStatus: Int
 }
 
     type Employee {
@@ -48,7 +48,7 @@ const schema = `
 
     type Mutation {
         insertData(result: inputTypeEmp): Employee!
-        updateDataIntoMongoDB(result: inputUpdatedTypeEmp!): Employee!
+        updateDataIntoMongoDB(result: inputUpdatedTypeEmp): Employee
         deleteData(id: String!): Boolean
     }
 `;
