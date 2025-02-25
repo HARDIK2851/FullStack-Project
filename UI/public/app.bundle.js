@@ -1,2 +1,1837 @@
-(()=>{"use strict";var e,t,n,r={858:(e,t,n)=>{var r=n(540),a=n(976),l=n(767),o=n(961);function i(e){return i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},i(e)}function c(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,u(r.key),r)}}function u(e){var t=function(e,t){if("object"!=i(e)||!e)return e;var n=e[Symbol.toPrimitive];if(void 0!==n){var r=n.call(e,"string");if("object"!=i(r))return r;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(e)}(e);return"symbol"==i(t)?t:t+""}function s(e,t,n){return t=p(t),function(e,t){if(t&&("object"===i(t)||"function"==typeof t))return t;if(void 0!==t)throw new TypeError("Derived constructors may only return object or undefined");return function(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}(e)}(e,m()?Reflect.construct(t,n||[],p(e).constructor):t.apply(e,n))}function m(){try{var e=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){})))}catch(e){}return(m=function(){return!!e})()}function p(e){return p=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(e){return e.__proto__||Object.getPrototypeOf(e)},p(e)}function f(e,t){return f=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(e,t){return e.__proto__=t,e},f(e,t)}n(378);var d=function(e){function t(e){var n;return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),(n=s(this,t,[e])).state={firstName:"",lastName:"",age:20,dateOfJoining:"",department:"IT",employeeType:"FullTime",currentStatus:1,title:"Employee"},n.formHandler=n.formHandler.bind(n),n}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),Object.defineProperty(e,"prototype",{writable:!1}),t&&f(e,t)}(t,e),n=t,(a=[{key:"formHandler",value:function(e){e.preventDefault();var t=this.state,n=t.firstName,r=t.lastName,a=t.age,l=t.dateOfJoining,o=t.department,i=t.employeeType,c=t.currentStatus,u=t.title;n&&r&&l?this.props.insertEmp({firstName:n,lastName:r,age:a,dateOfJoining:l,department:o,employeeType:i,title:u,currentStatus:c}):alert("Please fill in all fields.")}},{key:"render",value:function(){var e=this;return r.createElement("div",{class:"container"},r.createElement("h2",null,"Create Employee"),r.createElement("form",{onSubmit:this.formHandler},r.createElement("div",{class:"row"},r.createElement("div",{class:"col-md-6"},r.createElement("div",{class:"form-group"},r.createElement("label",{for:"firstName"},"First Name:"),r.createElement("input",{type:"text",id:"firstName",class:"form-control",value:this.state.firstName,onChange:function(t){return e.setState({firstName:t.target.value})}}))),r.createElement("div",{class:"col-md-6"},r.createElement("div",{class:"form-group"},r.createElement("label",{for:"lastName"},"Last Name:"),r.createElement("input",{type:"text",id:"lastName",class:"form-control",value:this.state.lastName,onChange:function(t){return e.setState({lastName:t.target.value})}})))),r.createElement("div",{class:"row"},r.createElement("div",{class:"col-md-6"},r.createElement("div",{class:"form-group"},r.createElement("label",{for:"age"},"Age:"),r.createElement("input",{type:"number",id:"age",class:"form-control",value:this.state.age,onChange:function(t){return e.setState({age:parseInt(t.target.value)})},min:"20",max:"70"}))),r.createElement("div",{class:"col-md-6"},r.createElement("div",{class:"form-group"},r.createElement("label",{for:"dateOfJoining"},"Date of Joining:"),r.createElement("input",{type:"date",id:"dateOfJoining",class:"form-control",value:this.state.dateOfJoining,onChange:function(t){return e.setState({dateOfJoining:t.target.value})}})))),r.createElement("div",{class:"form-group"},r.createElement("label",null,"Title:"),r.createElement("div",null,r.createElement("label",null,r.createElement("input",{type:"radio",name:"title",value:"Employee",checked:"Employee"===this.state.title,onChange:function(t){return e.setState({title:t.target.value})}})," Employee"),r.createElement("label",null,r.createElement("input",{type:"radio",name:"title",value:"Manager",checked:"Manager"===this.state.title,onChange:function(t){return e.setState({title:t.target.value})}})," Manager"),r.createElement("label",null,r.createElement("input",{type:"radio",name:"title",value:"Director",checked:"Director"===this.state.title,onChange:function(t){return e.setState({title:t.target.value})}})," Director"),r.createElement("label",null,r.createElement("input",{type:"radio",name:"title",value:"VP",checked:"VP"===this.state.title,onChange:function(t){return e.setState({title:t.target.value})}})," VP"))),r.createElement("div",{class:"form-group"},r.createElement("label",null,"Department:"),r.createElement("div",null,r.createElement("label",null,r.createElement("input",{type:"radio",name:"department",value:"IT",checked:"IT"===this.state.department,onChange:function(t){return e.setState({department:t.target.value})}})," IT"),r.createElement("label",null,r.createElement("input",{type:"radio",name:"department",value:"Marketing",checked:"Marketing"===this.state.department,onChange:function(t){return e.setState({department:t.target.value})}})," Marketing"),r.createElement("label",null,r.createElement("input",{type:"radio",name:"department",value:"HR",checked:"HR"===this.state.department,onChange:function(t){return e.setState({department:t.target.value})}})," HR"),r.createElement("label",null,r.createElement("input",{type:"radio",name:"department",value:"Engineering",checked:"Engineering"===this.state.department,onChange:function(t){return e.setState({department:t.target.value})}})," Engineering"))),r.createElement("div",{class:"form-group"},r.createElement("label",null,"Employee Type:"),r.createElement("div",null,r.createElement("label",null,r.createElement("input",{type:"radio",id:"fullTime",name:"employeeType",value:"FullTime",checked:"FullTime"===this.state.employeeType,onChange:function(t){return e.setState({employeeType:t.target.value})}})," Full Time"),r.createElement("label",null,r.createElement("input",{type:"radio",id:"partTime",name:"employeeType",value:"PartTime",checked:"PartTime"===this.state.employeeType,onChange:function(t){return e.setState({employeeType:t.target.value})}})," Part Time"),r.createElement("label",null,r.createElement("input",{type:"radio",id:"contract",name:"employeeType",value:"Contract",checked:"Contract"===this.state.employeeType,onChange:function(t){return e.setState({employeeType:t.target.value})}})," Contract"),r.createElement("label",null,r.createElement("input",{type:"radio",id:"seasonal",name:"employeeType",value:"Seasonal",checked:"Seasonal"===this.state.employeeType,onChange:function(t){return e.setState({employeeType:t.target.value})}})," Seasonal"))),r.createElement("div",{class:"form-group"},r.createElement("button",{class:"btn btn-primary",type:"submit"},"Add Employee"))))}}])&&c(n.prototype,a),Object.defineProperty(n,"prototype",{writable:!1}),n;var n,a}(r.Component);function y(e){return y="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},y(e)}function g(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,v(r.key),r)}}function v(e){var t=function(e,t){if("object"!=y(e)||!e)return e;var n=e[Symbol.toPrimitive];if(void 0!==n){var r=n.call(e,"string");if("object"!=y(r))return r;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(e)}(e);return"symbol"==y(t)?t:t+""}function h(e,t,n){return t=E(t),function(e,t){if(t&&("object"===y(t)||"function"==typeof t))return t;if(void 0!==t)throw new TypeError("Derived constructors may only return object or undefined");return function(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}(e)}(e,b()?Reflect.construct(t,n||[],E(e).constructor):t.apply(e,n))}function b(){try{var e=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){})))}catch(e){}return(b=function(){return!!e})()}function E(e){return E=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(e){return e.__proto__||Object.getPrototypeOf(e)},E(e)}function w(e,t){return w=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(e,t){return e.__proto__=t,e},w(e,t)}var O=function(e){function t(e){var n;return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),(n=h(this,t,[e])).handleDelete=n.handleDelete.bind(n),n.handleEdit=n.handleEdit.bind(n),n}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),Object.defineProperty(e,"prototype",{writable:!1}),t&&w(e,t)}(t,e),n=t,(l=[{key:"handleEdit",value:function(e){this.props.toggleEdit(e)}},{key:"handleDelete",value:function(e,t){var n=this,r='\n          mutation {\n              deleteData(id: "'.concat(e,'")\n          }\n      ');1!=t?graphqlRequest(r).then((function(t){if(t.deleteData){var r=n.props.EmployeeInfo.filter((function(t){return t._id!==e}));n.props.updateEmployeeInfo(r),alert("Employee Data Deleted successfully")}else console.log("deletion failed")})).catch((function(e){console.error("Error deleting data:",e)})):alert("CAN'T DELETE EMPLOYEE – STATUS ACTIVE")}},{key:"render",value:function(){var e=this,t=this.props.EmployeeInfo;return 0===t.length?r.createElement("h1",null,"There is no data to Display, Please enter Employee data"):r.createElement("div",null,r.createElement("h2",null,"Employee Table"),r.createElement("div",{className:"table-responsive"},r.createElement("table",{className:"table table-striped"},r.createElement("thead",{className:"thead-dark"},r.createElement("tr",{class:"table-primary"},r.createElement("th",null,"First Name"),r.createElement("th",null,"Last Name"),r.createElement("th",null,"Age"),r.createElement("th",null,"Date of Joining"),r.createElement("th",null,"Title"),r.createElement("th",null,"Department"),r.createElement("th",null,"Employee Type"),r.createElement("th",null,"Current Status"),r.createElement("th",null,"Action"))),r.createElement("tbody",null,t.map((function(t){return r.createElement("tr",{class:"table-success",key:t._id},r.createElement("td",null,t.firstName),r.createElement("td",null,t.lastName),r.createElement("td",null,t.age),r.createElement("td",null,t.dateOfJoining),r.createElement("td",null,t.title),r.createElement("td",null,t.department),r.createElement("td",null,t.employeeType),r.createElement("td",null,t.currentStatus),r.createElement("td",null,r.createElement(a.N_,{to:"/update"},r.createElement("button",{className:"btn btn-primary",onClick:function(){e.handleEdit(t)}},"Edit"),"  "),r.createElement("button",{className:"btn btn-danger mr-2",onClick:function(){return e.handleDelete(t._id,t.currentStatus)}},"Delete")))}))))))}}])&&g(n.prototype,l),Object.defineProperty(n,"prototype",{writable:!1}),n;var n,l}(r.Component);function S(e){return S="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},S(e)}function T(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,k(r.key),r)}}function k(e){var t=function(e,t){if("object"!=S(e)||!e)return e;var n=e[Symbol.toPrimitive];if(void 0!==n){var r=n.call(e,"string");if("object"!=S(r))return r;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(e)}(e);return"symbol"==S(t)?t:t+""}function j(e,t,n){return t=N(t),function(e,t){if(t&&("object"===S(t)||"function"==typeof t))return t;if(void 0!==t)throw new TypeError("Derived constructors may only return object or undefined");return function(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}(e)}(e,x()?Reflect.construct(t,n||[],N(e).constructor):t.apply(e,n))}function x(){try{var e=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){})))}catch(e){}return(x=function(){return!!e})()}function N(e){return N=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(e){return e.__proto__||Object.getPrototypeOf(e)},N(e)}function P(e,t){return P=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(e,t){return e.__proto__=t,e},P(e,t)}var D=function(e){function t(e){var n;return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),(n=j(this,t,[e])).state={_id:e.employee._id,firstName:e.employee.firstName,lastName:e.employee.lastName,age:e.employee.age,dateOfJoining:e.employee.dateOfJoining,department:e.employee.department,employeeType:e.employee.employeeType,title:e.employee.title,currentStatus:1},n.formHandler=n.formHandler.bind(n),n}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),Object.defineProperty(e,"prototype",{writable:!1}),t&&P(e,t)}(t,e),n=t,(a=[{key:"formHandler",value:function(e){e.preventDefault();var t=this.state,n=t._id,r=t.firstName,a=t.lastName,l=t.age,o=t.dateOfJoining,i=t.department,c=t.employeeType,u=t.title,s=t.currentStatus;r&&a&&o?this.props.updateCurrentEmployee({_id:n,firstName:r,lastName:a,age:l,dateOfJoining:o,department:i,employeeType:c,title:u,currentStatus:s}):alert("Please fill in all fields.")}},{key:"render",value:function(){var e=this;return r.createElement("div",{class:"container"},r.createElement("h2",null,"Edit Employee"),r.createElement("form",{onSubmit:this.formHandler},r.createElement("input",{id:"_id",type:"text",value:this.state._id,hidden:!0,onChange:function(t){return e.setState({_id:t.target.value})}}),r.createElement("div",{class:"form-group"},r.createElement("label",{for:"firstName"},"First Name:"),r.createElement("input",{type:"text",id:"firstName",class:"form-control",value:this.state.firstName,onChange:function(t){return e.setState({firstName:t.target.value})}})),r.createElement("div",{class:"form-group"},r.createElement("label",{for:"lastName"},"Last Name:"),r.createElement("input",{type:"text",id:"lastName",class:"form-control",value:this.state.lastName,onChange:function(t){return e.setState({lastName:t.target.value})}})),r.createElement("div",{class:"form-group"},r.createElement("label",{for:"age"},"Age:"),r.createElement("input",{type:"number",id:"age",class:"form-control",value:this.state.age,onChange:function(t){return e.setState({age:parseInt(t.target.value)})},min:"20",max:"70"})),r.createElement("div",{class:"form-group"},r.createElement("label",{for:"dateOfJoining"},"Date of Joining:"),r.createElement("input",{type:"text",id:"dateOfJoining",class:"form-control",value:this.state.dateOfJoining,onChange:function(t){return e.setState({dateOfJoining:t.target.value})},disabled:!0})),r.createElement("div",{class:"form-group"},r.createElement("label",null,"Title:"),r.createElement("div",null,r.createElement("label",{class:"mr-3"},r.createElement("input",{type:"radio",name:"title",value:"Employee",checked:"Employee"===this.state.title,onChange:function(t){return e.setState({title:t.target.value})},class:"mr-1"})," ","Employee"),r.createElement("label",{class:"mr-3"},r.createElement("input",{type:"radio",name:"title",value:"Manager",checked:"Manager"===this.state.title,onChange:function(t){return e.setState({title:t.target.value})},class:"mr-1"})," ","Manager"),r.createElement("label",{class:"mr-3"},r.createElement("input",{type:"radio",name:"title",value:"Director",checked:"Director"===this.state.title,onChange:function(t){return e.setState({title:t.target.value})},class:"mr-1"})," ","Director"),r.createElement("label",null,r.createElement("input",{type:"radio",name:"title",value:"VP",checked:"VP"===this.state.title,onChange:function(t){return e.setState({title:t.target.value})},class:"mr-1"})," ","VP"))),r.createElement("div",{class:"form-group"},r.createElement("label",null,"Department:"),r.createElement("div",null,r.createElement("label",{class:"mr-3"},r.createElement("input",{type:"radio",name:"department",value:"IT",checked:"IT"===this.state.department,onChange:function(t){return e.setState({department:t.target.value})},class:"mr-1"})," ","IT"),r.createElement("label",{class:"mr-3"},r.createElement("input",{type:"radio",name:"department",value:"Marketing",checked:"Marketing"===this.state.department,onChange:function(t){return e.setState({department:t.target.value})},class:"mr-1"})," ","Marketing"),r.createElement("label",{class:"mr-3"},r.createElement("input",{type:"radio",name:"department",value:"HR",checked:"HR"===this.state.department,onChange:function(t){return e.setState({department:t.target.value})},class:"mr-1"})," ","HR"),r.createElement("label",null,r.createElement("input",{type:"radio",name:"department",value:"Engineering",checked:"Engineering"===this.state.department,onChange:function(t){return e.setState({department:t.target.value})},class:"mr-1"})," ","Engineering"))),r.createElement("div",{class:"form-group"},r.createElement("label",null,"Employee Type:"),r.createElement("div",null,r.createElement("label",{class:"mr-3"},r.createElement("input",{type:"radio",id:"fullTime",name:"employeeType",value:"FullTime",checked:"FullTime"===this.state.employeeType,onChange:function(t){return e.setState({employeeType:t.target.value})},class:"mr-1"})," ","Full Time"),r.createElement("label",{class:"mr-3"},r.createElement("input",{type:"radio",id:"partTime",name:"employeeType",value:"PartTime",checked:"PartTime"===this.state.employeeType,onChange:function(t){return e.setState({employeeType:t.target.value})},class:"mr-1"})," ","Part Time"),r.createElement("label",{class:"mr-3"},r.createElement("input",{type:"radio",id:"contract",name:"employeeType",value:"Contract",checked:"Contract"===this.state.employeeType,onChange:function(t){return e.setState({employeeType:t.target.value})},class:"mr-1"})," ","Contract"),r.createElement("label",null,r.createElement("input",{type:"radio",id:"seasonal",name:"employeeType",value:"Seasonal",checked:"Seasonal"===this.state.employeeType,onChange:function(t){return e.setState({employeeType:t.target.value})},class:"mr-1"})," ","Seasonal")),r.createElement("div",{className:"form-group"},r.createElement("label",{htmlFor:"currentStatus"},"Current Status:"),r.createElement("select",{id:"currentStatus",className:"form-control",value:this.state.currentStatus,onChange:function(t){return e.setState({currentStatus:parseInt(t.target.value)})}},r.createElement("option",{value:1},"Active"),r.createElement("option",{value:0},"Retired")))),r.createElement("button",{type:"submit",class:"btn btn-primary"},"Update Employee")))}}])&&T(n.prototype,a),Object.defineProperty(n,"prototype",{writable:!1}),n;var n,a}(r.Component);function _(e){return _="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},_(e)}function C(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,I(r.key),r)}}function I(e){var t=function(e,t){if("object"!=_(e)||!e)return e;var n=e[Symbol.toPrimitive];if(void 0!==n){var r=n.call(e,"string");if("object"!=_(r))return r;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(e)}(e);return"symbol"==_(t)?t:t+""}function M(e,t,n){return t=R(t),function(e,t){if(t&&("object"===_(t)||"function"==typeof t))return t;if(void 0!==t)throw new TypeError("Derived constructors may only return object or undefined");return function(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}(e)}(e,B()?Reflect.construct(t,n||[],R(e).constructor):t.apply(e,n))}function B(){try{var e=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){})))}catch(e){}return(B=function(){return!!e})()}function R(e){return R=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(e){return e.__proto__||Object.getPrototypeOf(e)},R(e)}function J(e,t){return J=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(e,t){return e.__proto__=t,e},J(e,t)}var A=function(e){function t(e){var n;return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),(n=M(this,t,[e])).handleDelete=n.handleDelete.bind(n),n.handleEdit=n.handleEdit.bind(n),n}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),Object.defineProperty(e,"prototype",{writable:!1}),t&&J(e,t)}(t,e),n=t,(l=[{key:"handleEdit",value:function(e){this.props.toggleEdit(e)}},{key:"handleDelete",value:function(e,t){var n=this,r='\n          mutation {\n              deleteData(id: "'.concat(e,'")\n          }\n      ');1!=t?graphqlRequest(r).then((function(t){if(t.deleteData){var r=n.props.EmployeeInfo.filter((function(t){return t._id!==e}));n.props.updateEmployeeInfo(r),alert("Employee Data Deleted successfully")}})).catch((function(e){console.error("Error deleting data:",e)})):alert("CAN'T DELETE EMPLOYEE – STATUS ACTIVE")}},{key:"render",value:function(){var e=this,t=this.props.EmployeeInfo.filter((function(e){return e.age>=64}));return 0===t.length?r.createElement("h1",null,"No upcoming retirement found."):r.createElement("div",null,r.createElement("h2",null,"Upcoming Retirement Table"),r.createElement("div",{className:"table-responsive"},r.createElement("table",{className:"table table-striped"},r.createElement("thead",{className:"thead-dark"},r.createElement("tr",{class:"table-primary"},r.createElement("th",null,"First Name"),r.createElement("th",null,"Last Name"),r.createElement("th",null,"Age"),r.createElement("th",null,"Date of Joining"),r.createElement("th",null,"Title"),r.createElement("th",null,"Department"),r.createElement("th",null,"Employee Type"),r.createElement("th",null,"Current Status"),r.createElement("th",null,"Action"))),r.createElement("tbody",null,t.map((function(t){return r.createElement("tr",{class:"table-success",key:t._id},r.createElement("td",null,t.firstName),r.createElement("td",null,t.lastName),r.createElement("td",null,t.age),r.createElement("td",null,t.dateOfJoining),r.createElement("td",null,t.title),r.createElement("td",null,t.department),r.createElement("td",null,t.employeeType),r.createElement("td",null,t.currentStatus),r.createElement("td",null,r.createElement(a.N_,{to:"/update"},r.createElement("button",{className:"btn btn-primary",onClick:function(){e.handleEdit(t)}},"Edit"),"  "),r.createElement("button",{className:"btn btn-danger mr-2",onClick:function(){return e.props.handleDelete(t._id,t.currentStatus)}},"Delete")))}))))))}}])&&C(n.prototype,l),Object.defineProperty(n,"prototype",{writable:!1}),n;var n,l}(r.Component);function L(e){return L="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},L(e)}function F(e){return function(e){if(Array.isArray(e))return H(e)}(e)||function(e){if("undefined"!=typeof Symbol&&null!=e[Symbol.iterator]||null!=e["@@iterator"])return Array.from(e)}(e)||function(e,t){if(e){if("string"==typeof e)return H(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?H(e,t):void 0}}(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function H(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n];return r}function q(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),n.push.apply(n,r)}return n}function U(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{};t%2?q(Object(n),!0).forEach((function(t){G(e,t,n[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):q(Object(n)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))}))}return e}function V(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,Q(r.key),r)}}function z(e,t,n){return t=Y(t),function(e,t){if(t&&("object"===L(t)||"function"==typeof t))return t;if(void 0!==t)throw new TypeError("Derived constructors may only return object or undefined");return function(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}(e)}(e,$()?Reflect.construct(t,n||[],Y(e).constructor):t.apply(e,n))}function $(){try{var e=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){})))}catch(e){}return($=function(){return!!e})()}function Y(e){return Y=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(e){return e.__proto__||Object.getPrototypeOf(e)},Y(e)}function K(e,t){return K=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(e,t){return e.__proto__=t,e},K(e,t)}function G(e,t,n){return(t=Q(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function Q(e){var t=function(e,t){if("object"!=L(e)||!e)return e;var n=e[Symbol.toPrimitive];if(void 0!==n){var r=n.call(e,"string");if("object"!=L(r))return r;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(e)}(e);return"symbol"==L(t)?t:t+""}function W(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return fetch("http://localhost:4000/graphql",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({query:e,variables:t})}).then((function(e){return e.json()})).then((function(e){return e.validateField&&function(e){var t=e[0];if("BAD_USER_INPUT"===t.extensions.code){var n=t.extensions.validateField.join("\n ");alert("".concat(t.message,":\n ").concat(n))}else alert("".concat(t.extensions.code,": ").concat(t.message))}(e.validateField),e.data})).catch((function(e){alert("Error in processing request: ".concat(e.message))}))}var X=function(e){function t(){var e;return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),G(e=z(this,t),"a",void 0),e.state={employeeData:[],updatedEmployeeData:[],isEditing:!1,selectedEmployee:null},e.componentDidMount=e.componentDidMount.bind(e),e.addEmployeeData=e.addEmployeeData.bind(e),e.addEmployee=e.addEmployee.bind(e),e.updateEmployeeData=e.updateEmployeeData.bind(e),e.updateEmployee=e.updateEmployee.bind(e),e.updateEmployeeInfo=e.updateEmployeeInfo.bind(e),e.toggleEdit=e.toggleEdit.bind(e),e}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),Object.defineProperty(e,"prototype",{writable:!1}),t&&K(e,t)}(t,e),n=t,(o=[{key:"componentDidMount",value:function(){var e=this;W("query getEmployeeInfo {\n      getEmployeeInfo {\n        _id\n        age\n        currentStatus\n        dateOfJoining\n        department\n        employeeType\n        firstName\n        lastName\n        title\n      }\n    }").then((function(t){e.setState({employeeData:t.getEmployeeInfo})}))}},{key:"addEmployeeData",value:function(e){var t=this,n=U({},e);n.dateOfJoining=new Date(n.dateOfJoining).toISOString(),delete n.validateField,this.addEmployee("\n        mutation insertData($result: inputTypeEmp)\n        {\n         insertData(result: $result)\n          {\n           _id  \n           currentStatus\n           age\n           department\n           dateOfJoining\n           employeeType\n           firstName\n           lastName\n           title\n         }\n       }",n).then((function(e){t.setState({employeeData:[].concat(F(t.state.employeeData),[U({},e.insertData)])}),alert("Data Added Successfully.")}))}},{key:"updateEmployeeData",value:function(e){var t=this,n=U({},e);console.log(e),delete e.validateField,W("\n    mutation updateDataIntoMongoDB($result: inputUpdatedTypeEmp!) {\n      updateDataIntoMongoDB(result: $result) {\n        _id\n        lastName\n        firstName\n        age\n        dateOfJoining\n        title\n        department\n        employeeType\n        currentStatus\n      }\n    }",e).then((function(e){try{t.setState({updatedEmployeeData:[].concat(F(t.state.updatedEmployeeData),[U({},e.updateDataIntoMongoDB)])}),alert("Data Updated Successfully.")}catch(e){console.error("Error updating state:",e),alert("An error occurred while updating employee data."+n)}})).catch((function(e){console.error("Error updating employee data:",e),alert("An error occurred while updating employee data.")}))}},{key:"addEmployee",value:function(e,t){return W(e,{result:t})}},{key:"updateEmployee",value:function(e,t){return W(e,{result:t})}},{key:"updateEmployeeInfo",value:function(e){this.setState({employeeData:e})}},{key:"toggleEdit",value:function(e){this.setState((function(){return{selectedEmployee:e}}))}},{key:"render",value:function(){var e=this.state,t=(e.employeeData,e.isEditing,e.selectedEmployee);return r.createElement(a.Kd,null,r.createElement("div",null,r.createElement("nav",{className:"navbar navbar-expand-lg navbar-dark bg-primary"},r.createElement("div",{className:"container"},r.createElement(a.N_,{className:"navbar-brand font-weight-bold",to:"/"},"Create Employee"),r.createElement("button",{className:"navbar-toggler",type:"button","data-toggle":"collapse","data-target":"#navbarNav","aria-controls":"navbarNav","aria-expanded":"false","aria-label":"Toggle navigation"},r.createElement("span",{className:"navbar-toggler-icon"})),r.createElement("div",{className:"collapse navbar-collapse",id:"navbarNav"},r.createElement("ul",{className:"navbar-nav ml-auto"},r.createElement("li",{className:"nav-item"},r.createElement(a.N_,{className:"nav-link font-weight-bold",to:"/table"},"Employee Table")),r.createElement("li",{className:"nav-item"},r.createElement(a.N_,{className:"nav-link font-weight-bold",to:"/retiringEmployeeTable"},"Upcoming Retirements")))))),r.createElement("hr",null),r.createElement(l.BV,null,r.createElement(l.qh,{exact:!0,path:"/",element:r.createElement(d,{insertEmp:this.addEmployeeData})}),r.createElement(l.qh,{path:"/table",element:r.createElement(O,{EmployeeInfo:this.state.employeeData,updateEmployeeInfo:this.updateEmployeeInfo,toggleEdit:this.toggleEdit})}),r.createElement(l.qh,{path:"/retiringEmployeeTable",element:r.createElement(A,{EmployeeInfo:this.state.employeeData,updateEmployeeInfo:this.updateEmployeeInfo,toggleEdit:this.toggleEdit})}),r.createElement(l.qh,{path:"/update",element:r.createElement(D,{selectedEmployee:t,updateCurrentEmployee:this.updateEmployeeData,employee:t})}))))}}])&&V(n.prototype,o),Object.defineProperty(n,"prototype",{writable:!1}),n;var n,o}(r.Component);o.createRoot(document.getElementById("content")).render(r.createElement(X,null))},385:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%272%27 fill=%27%23fff%27/%3e%3c/svg%3e"},782:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%2386b7fe%27/%3e%3c/svg%3e"},718:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%23fff%27/%3e%3c/svg%3e"},154:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%280, 0, 0, 0.25%29%27/%3e%3c/svg%3e"},734:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 0.25%29%27/%3e%3c/svg%3e"},372:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 12 12%27 width=%2712%27 height=%2712%27 fill=%27none%27 stroke=%27%23dc3545%27%3e%3ccircle cx=%276%27 cy=%276%27 r=%274.5%27/%3e%3cpath stroke-linejoin=%27round%27 d=%27M5.8 3.6h.4L6 6.5z%27/%3e%3ccircle cx=%276%27 cy=%278.2%27 r=%27.6%27 fill=%27%23dc3545%27 stroke=%27none%27/%3e%3c/svg%3e"},249:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23000%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e"},690:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%236ea8fe%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e"},932:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3e%3cpath d=%27M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z%27/%3e%3c/svg%3e"},144:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3e%3cpath d=%27M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e"},210:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%23052c65%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e"},326:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%23212529%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e"},531:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23343a40%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m2 5 6 6 6-6%27/%3e%3c/svg%3e"},115:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23dee2e6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m2 5 6 6 6-6%27/%3e%3c/svg%3e"},274:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27M6 10h8%27/%3e%3c/svg%3e"},419:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27m6 10 3 3 6-6%27/%3e%3c/svg%3e"},366:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 0.55%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e"},247:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%2833, 37, 41, 0.75%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e"},487:e=>{e.exports="data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 8%27%3e%3cpath fill=%27%23198754%27 d=%27M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z%27/%3e%3c/svg%3e"}},a={};function l(e){var t=a[e];if(void 0!==t)return t.exports;var n=a[e]={id:e,exports:{}};return r[e](n,n.exports,l),n.exports}l.m=r,e=[],l.O=(t,n,r,a)=>{if(!n){var o=1/0;for(s=0;s<e.length;s++){for(var[n,r,a]=e[s],i=!0,c=0;c<n.length;c++)(!1&a||o>=a)&&Object.keys(l.O).every((e=>l.O[e](n[c])))?n.splice(c--,1):(i=!1,a<o&&(o=a));if(i){e.splice(s--,1);var u=r();void 0!==u&&(t=u)}}return t}a=a||0;for(var s=e.length;s>0&&e[s-1][2]>a;s--)e[s]=e[s-1];e[s]=[n,r,a]},l.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return l.d(t,{a:t}),t},n=Object.getPrototypeOf?e=>Object.getPrototypeOf(e):e=>e.__proto__,l.t=function(e,r){if(1&r&&(e=this(e)),8&r)return e;if("object"==typeof e&&e){if(4&r&&e.__esModule)return e;if(16&r&&"function"==typeof e.then)return e}var a=Object.create(null);l.r(a);var o={};t=t||[null,n({}),n([]),n(n)];for(var i=2&r&&e;"object"==typeof i&&!~t.indexOf(i);i=n(i))Object.getOwnPropertyNames(i).forEach((t=>o[t]=()=>e[t]));return o.default=()=>e,l.d(a,o),a},l.d=(e,t)=>{for(var n in t)l.o(t,n)&&!l.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},l.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),l.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},(()=>{l.b=document.baseURI||self.location.href;var e={524:0};l.O.j=t=>0===e[t];var t=(t,n)=>{var r,a,[o,i,c]=n,u=0;if(o.some((t=>0!==e[t]))){for(r in i)l.o(i,r)&&(l.m[r]=i[r]);if(c)var s=c(l)}for(t&&t(n);u<o.length;u++)a=o[u],l.o(e,a)&&e[a]&&e[a][0](),e[a]=0;return l.O(s)},n=self.webpackChunkhardik_thakor_assignment1=self.webpackChunkhardik_thakor_assignment1||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),l.nc=void 0;var o=l.O(void 0,[121],(()=>l(858)));o=l.O(o)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./JSX/App.jsx":
+/*!*********************!*\
+  !*** ./JSX/App.jsx ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   graphqlRequest: () => (/* binding */ graphqlRequest)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var _src_EmployeeCreate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/EmployeeCreate */ "./JSX/src/EmployeeCreate.jsx");
+/* harmony import */ var _src_EmployeeTable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./src/EmployeeTable */ "./JSX/src/EmployeeTable.jsx");
+/* harmony import */ var _src_EmployeeUpdate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./src/EmployeeUpdate */ "./JSX/src/EmployeeUpdate.jsx");
+/* harmony import */ var _src_UpcomingRetirementTable__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./src/UpcomingRetirementTable */ "./JSX/src/UpcomingRetirementTable.jsx");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+//this class will create a component to enter employee details with some predefine values
+
+
+
+
+
+
+
+
+
+// this function will send an graphql request
+function graphqlRequest(queryString) {
+  var variableValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  return fetch("http://localhost:4000/graphql", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      query: queryString,
+      variables: variableValue
+    })
+  }).then(function (res) {
+    return res.json();
+  }).then(function (dbData) {
+    if (dbData.validateField) {
+      handleGraphQLFormError(dbData.validateField);
+    }
+    return dbData.data;
+  }).catch(function (e) {
+    alert("Error in processing request: ".concat(e.message));
+  });
+}
+// this will show erro if there is any
+function handleGraphQLFormError(validateField) {
+  var error = validateField[0];
+  if (error.extensions.code === "BAD_USER_INPUT") {
+    var details = error.extensions.validateField.join("\n ");
+    alert("".concat(error.message, ":\n ").concat(details));
+  } else {
+    alert("".concat(error.extensions.code, ": ").concat(error.message));
+  }
+}
+
+// this class component contains all other components
+var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
+  function EmployeeDirectory() {
+    var _this;
+    _classCallCheck(this, EmployeeDirectory);
+    _this = _callSuper(this, EmployeeDirectory);
+    _this.state = {
+      employeeData: [],
+      updatedEmployeeData: [],
+      isEditing: false,
+      // New state to track whether editing mode is active
+      selectedEmployee: null
+    };
+    _this.componentDidMount = _this.componentDidMount.bind(_this);
+    _this.addEmployeeData = _this.addEmployeeData.bind(_this);
+    _this.addEmployee = _this.addEmployee.bind(_this);
+    _this.updateEmployeeData = _this.updateEmployeeData.bind(_this);
+    _this.updateEmployee = _this.updateEmployee.bind(_this);
+    _this.updateEmployeeInfo = _this.updateEmployeeInfo.bind(_this);
+    _this.toggleEdit = _this.toggleEdit.bind(_this);
+    return _this;
+  }
+  _inherits(EmployeeDirectory, _React$Component);
+  return _createClass(EmployeeDirectory, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+      var getQuery = "query getEmployeeInfo {\n      getEmployeeInfo {\n        _id\n        age\n        currentStatus\n        dateOfJoining\n        department\n        employeeType\n        firstName\n        lastName\n        title\n      }\n    }";
+      graphqlRequest(getQuery).then(function (response) {
+        _this2.setState({
+          employeeData: response.getEmployeeInfo
+        });
+      });
+    }
+
+    // this function is called when user has filled all the data in EmployeeCreat form
+    // then it will use graphql query to store that data in mondodb cluster
+  }, {
+    key: "addEmployeeData",
+    value: function addEmployeeData(employee) {
+      var _this3 = this;
+      var empInfo = _objectSpread({}, employee);
+      empInfo.dateOfJoining = new Date(empInfo.dateOfJoining).toISOString();
+      delete empInfo.validateField;
+      var updateQuery = "\n        mutation insertData($result: inputTypeEmp)\n        {\n         insertData(result: $result)\n          {\n           _id  \n           currentStatus\n           age\n           department\n           dateOfJoining\n           employeeType\n           firstName\n           lastName\n           title\n         }\n       }";
+      this.addEmployee(updateQuery, empInfo).then(function (resultAdded) {
+        _this3.setState({
+          employeeData: [].concat(_toConsumableArray(_this3.state.employeeData), [_objectSpread({}, resultAdded.insertData)])
+        });
+        alert("Data Added Successfully.");
+      });
+    }
+
+    // this function will be called when user presses the update employee button in EmployeeUpdate Component after filling all feilds 
+  }, {
+    key: "updateEmployeeData",
+    value: function updateEmployeeData(empdata) {
+      var _this4 = this;
+      var empInfo = _objectSpread({}, empdata);
+      console.log(empdata);
+      delete empdata.validateField;
+      var query = "\n    mutation updateDataIntoMongoDB($result: inputUpdatedTypeEmp!) {\n      updateDataIntoMongoDB(result: $result) {\n        _id\n        lastName\n        firstName\n        age\n        dateOfJoining\n        title\n        department\n        employeeType\n        currentStatus\n      }\n    }";
+      this.updateEmployee(query, empInfo).then(function (resultAdded) {
+        _this4.setState({
+          employeeData: [].concat(_toConsumableArray(_this4.state.employeeData), [_objectSpread({}, resultAdded.insertData)])
+        });
+        alert("Data Updated Successfully.");
+      });
+    }
+  }, {
+    key: "addEmployee",
+    value: function addEmployee(query, result) {
+      return graphqlRequest(query, {
+        result: result
+      });
+    }
+  }, {
+    key: "updateEmployee",
+    value: function updateEmployee(query, result) {
+      return graphqlRequest(query, {
+        result: result
+      });
+    }
+  }, {
+    key: "updateEmployeeInfo",
+    value: function updateEmployeeInfo(updatedData) {
+      this.setState({
+        employeeData: updatedData
+      });
+    }
+  }, {
+    key: "toggleEdit",
+    value: function toggleEdit(employee) {
+      // this will selete the data of employee which is choosen for the updation
+      this.setState(function () {
+        return {
+          selectedEmployee: employee
+        };
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+        employeeData = _this$state.employeeData,
+        isEditing = _this$state.isEditing,
+        selectedEmployee = _this$state.selectedEmployee;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
+        className: "navbar navbar-expand-lg navbar-dark bg-primary"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
+        className: "navbar-brand font-weight-bold",
+        to: "/"
+      }, "Create Employee"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+        className: "navbar-toggler",
+        type: "button",
+        "data-toggle": "collapse",
+        "data-target": "#navbarNav",
+        "aria-controls": "navbarNav",
+        "aria-expanded": "false",
+        "aria-label": "Toggle navigation"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+        className: "navbar-toggler-icon"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "collapse navbar-collapse",
+        id: "navbarNav"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+        className: "navbar-nav ml-auto"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
+        className: "nav-link font-weight-bold",
+        to: "/table"
+      }, "Employee Table")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
+        className: "nav-link font-weight-bold",
+        to: "/retiringEmployeeTable"
+      }, "Upcoming Retirements")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+        exact: true,
+        path: "/",
+        element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_EmployeeCreate__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          insertEmp: this.addEmployeeData
+        })
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+        path: "/table",
+        element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_EmployeeTable__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          EmployeeInfo: this.state.employeeData,
+          updateEmployeeInfo: this.updateEmployeeInfo,
+          toggleEdit: this.toggleEdit
+        })
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+        path: "/retiringEmployeeTable",
+        element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_UpcomingRetirementTable__WEBPACK_IMPORTED_MODULE_6__["default"], {
+          EmployeeInfo: this.state.employeeData,
+          updateEmployeeInfo: this.updateEmployeeInfo,
+          toggleEdit: this.toggleEdit
+        })
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+        path: "/update",
+        element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_EmployeeUpdate__WEBPACK_IMPORTED_MODULE_5__["default"]
+
+        // updateEmployeeInfo={this.updateEmployeeInfo}
+        // isEditing={isEditing}
+        , {
+          selectedEmployee: selectedEmployee
+          // toggleEdit={this.toggleEdit}
+          ,
+          updateCurrentEmployee: this.updateEmployeeData,
+          employee: selectedEmployee
+        })
+      }))));
+    }
+  }]);
+}((react__WEBPACK_IMPORTED_MODULE_0___default().Component)); // ReactDOM.render(<EmployeeDirectory/>, document.getElementById("content"));
+var root = react_dom__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById('content'));
+root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EmployeeDirectory, null));
+
+/***/ }),
+
+/***/ "./JSX/app.jsx":
+/*!*********************!*\
+  !*** ./JSX/app.jsx ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   graphqlRequest: () => (/* binding */ graphqlRequest)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var _src_EmployeeCreate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/EmployeeCreate */ "./JSX/src/EmployeeCreate.jsx");
+/* harmony import */ var _src_EmployeeTable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./src/EmployeeTable */ "./JSX/src/EmployeeTable.jsx");
+/* harmony import */ var _src_EmployeeUpdate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./src/EmployeeUpdate */ "./JSX/src/EmployeeUpdate.jsx");
+/* harmony import */ var _src_UpcomingRetirementTable__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./src/UpcomingRetirementTable */ "./JSX/src/UpcomingRetirementTable.jsx");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+//this class will create a component to enter employee details with some predefine values
+
+
+
+
+
+
+
+
+
+// this function will send an graphql request
+function graphqlRequest(queryString) {
+  var variableValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  return fetch("http://localhost:4000/graphql", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      query: queryString,
+      variables: variableValue
+    })
+  }).then(function (res) {
+    return res.json();
+  }).then(function (dbData) {
+    if (dbData.validateField) {
+      handleGraphQLFormError(dbData.validateField);
+    }
+    return dbData.data;
+  }).catch(function (e) {
+    alert("Error in processing request: ".concat(e.message));
+  });
+}
+// this will show erro if there is any
+function handleGraphQLFormError(validateField) {
+  var error = validateField[0];
+  if (error.extensions.code === "BAD_USER_INPUT") {
+    var details = error.extensions.validateField.join("\n ");
+    alert("".concat(error.message, ":\n ").concat(details));
+  } else {
+    alert("".concat(error.extensions.code, ": ").concat(error.message));
+  }
+}
+
+// this class component contains all other components
+var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
+  function EmployeeDirectory() {
+    var _this;
+    _classCallCheck(this, EmployeeDirectory);
+    _this = _callSuper(this, EmployeeDirectory);
+    _this.state = {
+      employeeData: [],
+      updatedEmployeeData: [],
+      isEditing: false,
+      // New state to track whether editing mode is active
+      selectedEmployee: null
+    };
+    _this.componentDidMount = _this.componentDidMount.bind(_this);
+    _this.addEmployeeData = _this.addEmployeeData.bind(_this);
+    _this.addEmployee = _this.addEmployee.bind(_this);
+    _this.updateEmployeeData = _this.updateEmployeeData.bind(_this);
+    _this.updateEmployee = _this.updateEmployee.bind(_this);
+    _this.updateEmployeeInfo = _this.updateEmployeeInfo.bind(_this);
+    _this.toggleEdit = _this.toggleEdit.bind(_this);
+    return _this;
+  }
+  _inherits(EmployeeDirectory, _React$Component);
+  return _createClass(EmployeeDirectory, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+      var getQuery = "query getEmployeeInfo {\n      getEmployeeInfo {\n        _id\n        age\n        currentStatus\n        dateOfJoining\n        department\n        employeeType\n        firstName\n        lastName\n        title\n      }\n    }";
+      graphqlRequest(getQuery).then(function (response) {
+        _this2.setState({
+          employeeData: response.getEmployeeInfo
+        });
+      });
+    }
+
+    // this function is called when user has filled all the data in EmployeeCreat form
+    // then it will use graphql query to store that data in mondodb cluster
+  }, {
+    key: "addEmployeeData",
+    value: function addEmployeeData(employee) {
+      var _this3 = this;
+      var empInfo = _objectSpread({}, employee);
+      empInfo.dateOfJoining = new Date(empInfo.dateOfJoining).toISOString();
+      delete empInfo.validateField;
+      var updateQuery = "\n        mutation insertData($result: inputTypeEmp)\n        {\n         insertData(result: $result)\n          {\n           _id  \n           currentStatus\n           age\n           department\n           dateOfJoining\n           employeeType\n           firstName\n           lastName\n           title\n         }\n       }";
+      this.addEmployee(updateQuery, empInfo).then(function (resultAdded) {
+        _this3.setState({
+          employeeData: [].concat(_toConsumableArray(_this3.state.employeeData), [_objectSpread({}, resultAdded.insertData)])
+        });
+        alert("Data Added Successfully.");
+      });
+    }
+
+    // this function will be called when user presses the update employee button in EmployeeUpdate Component after filling all feilds 
+  }, {
+    key: "updateEmployeeData",
+    value: function updateEmployeeData(empdata) {
+      var _this4 = this;
+      var empInfo = _objectSpread({}, empdata);
+      console.log(empdata);
+      delete empdata.validateField;
+      var query = "\n    mutation updateDataIntoMongoDB($result: inputUpdatedTypeEmp!) {\n      updateDataIntoMongoDB(result: $result) {\n        _id\n        lastName\n        firstName\n        age\n        dateOfJoining\n        title\n        department\n        employeeType\n        currentStatus\n      }\n    }";
+      this.updateEmployee(query, empInfo).then(function (resultAdded) {
+        _this4.setState({
+          employeeData: [].concat(_toConsumableArray(_this4.state.employeeData), [_objectSpread({}, resultAdded.insertData)])
+        });
+        alert("Data Updated Successfully.");
+      });
+    }
+  }, {
+    key: "addEmployee",
+    value: function addEmployee(query, result) {
+      return graphqlRequest(query, {
+        result: result
+      });
+    }
+  }, {
+    key: "updateEmployee",
+    value: function updateEmployee(query, result) {
+      return graphqlRequest(query, {
+        result: result
+      });
+    }
+  }, {
+    key: "updateEmployeeInfo",
+    value: function updateEmployeeInfo(updatedData) {
+      this.setState({
+        employeeData: updatedData
+      });
+    }
+  }, {
+    key: "toggleEdit",
+    value: function toggleEdit(employee) {
+      // this will selete the data of employee which is choosen for the updation
+      this.setState(function () {
+        return {
+          selectedEmployee: employee
+        };
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+        employeeData = _this$state.employeeData,
+        isEditing = _this$state.isEditing,
+        selectedEmployee = _this$state.selectedEmployee;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
+        className: "navbar navbar-expand-lg navbar-dark bg-primary"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
+        className: "navbar-brand font-weight-bold",
+        to: "/"
+      }, "Create Employee"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+        className: "navbar-toggler",
+        type: "button",
+        "data-toggle": "collapse",
+        "data-target": "#navbarNav",
+        "aria-controls": "navbarNav",
+        "aria-expanded": "false",
+        "aria-label": "Toggle navigation"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+        className: "navbar-toggler-icon"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "collapse navbar-collapse",
+        id: "navbarNav"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+        className: "navbar-nav ml-auto"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
+        className: "nav-link font-weight-bold",
+        to: "/table"
+      }, "Employee Table")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
+        className: "nav-link font-weight-bold",
+        to: "/retiringEmployeeTable"
+      }, "Upcoming Retirements")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+        exact: true,
+        path: "/",
+        element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_EmployeeCreate__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          insertEmp: this.addEmployeeData
+        })
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+        path: "/table",
+        element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_EmployeeTable__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          EmployeeInfo: this.state.employeeData,
+          updateEmployeeInfo: this.updateEmployeeInfo,
+          toggleEdit: this.toggleEdit
+        })
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+        path: "/retiringEmployeeTable",
+        element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_UpcomingRetirementTable__WEBPACK_IMPORTED_MODULE_6__["default"], {
+          EmployeeInfo: this.state.employeeData,
+          updateEmployeeInfo: this.updateEmployeeInfo,
+          toggleEdit: this.toggleEdit
+        })
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+        path: "/update",
+        element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_EmployeeUpdate__WEBPACK_IMPORTED_MODULE_5__["default"]
+
+        // updateEmployeeInfo={this.updateEmployeeInfo}
+        // isEditing={isEditing}
+        , {
+          selectedEmployee: selectedEmployee
+          // toggleEdit={this.toggleEdit}
+          ,
+          updateCurrentEmployee: this.updateEmployeeData,
+          employee: selectedEmployee
+        })
+      }))));
+    }
+  }]);
+}((react__WEBPACK_IMPORTED_MODULE_0___default().Component)); // ReactDOM.render(<EmployeeDirectory/>, document.getElementById("content"));
+var root = react_dom__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById('content'));
+root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EmployeeDirectory, null));
+
+/***/ }),
+
+/***/ "./JSX/src/EmployeeCreate.jsx":
+/*!************************************!*\
+  !*** ./JSX/src/EmployeeCreate.jsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ EmployeeCreate)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var EmployeeCreate = /*#__PURE__*/function (_React$Component) {
+  function EmployeeCreate(props) {
+    var _this;
+    _classCallCheck(this, EmployeeCreate);
+    _this = _callSuper(this, EmployeeCreate, [props]);
+    _this.state = {
+      firstName: "",
+      lastName: "",
+      age: 20,
+      dateOfJoining: "",
+      department: "IT",
+      employeeType: "FullTime",
+      currentStatus: 1,
+      title: "Employee"
+    };
+    _this.formHandler = _this.formHandler.bind(_this);
+    return _this;
+  }
+
+  // this function will be called when user submits the form by clicking add employee button
+  _inherits(EmployeeCreate, _React$Component);
+  return _createClass(EmployeeCreate, [{
+    key: "formHandler",
+    value: function formHandler(e) {
+      e.preventDefault();
+      var _this$state = this.state,
+        firstName = _this$state.firstName,
+        lastName = _this$state.lastName,
+        age = _this$state.age,
+        dateOfJoining = _this$state.dateOfJoining,
+        department = _this$state.department,
+        employeeType = _this$state.employeeType,
+        currentStatus = _this$state.currentStatus,
+        title = _this$state.title;
+      //this will check for null values in name, last name and date of joining
+      if (!firstName || !lastName || !dateOfJoining) {
+        alert("Please fill in all fields.");
+        return;
+      }
+      this.props.insertEmp({
+        firstName: firstName,
+        lastName: lastName,
+        age: age,
+        dateOfJoining: dateOfJoining,
+        department: department,
+        employeeType: employeeType,
+        title: title,
+        currentStatus: currentStatus
+      });
+    }
+
+    //this is a form, user can use this to enter details of employee data in mongodb database
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Create Employee"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
+        onSubmit: this.formHandler
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "col-md-6"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        for: "firstName"
+      }, "First Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "text",
+        id: "firstName",
+        class: "form-control",
+        value: this.state.firstName,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            firstName: e.target.value
+          });
+        }
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "col-md-6"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        for: "lastName"
+      }, "Last Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "text",
+        id: "lastName",
+        class: "form-control",
+        value: this.state.lastName,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            lastName: e.target.value
+          });
+        }
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "col-md-6"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        for: "age"
+      }, "Age:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "number",
+        id: "age",
+        class: "form-control",
+        value: this.state.age,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            age: parseInt(e.target.value)
+          });
+        },
+        min: "20",
+        max: "70"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "col-md-6"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        for: "dateOfJoining"
+      }, "Date of Joining:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "date",
+        id: "dateOfJoining",
+        class: "form-control",
+        value: this.state.dateOfJoining,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            dateOfJoining: e.target.value
+          });
+        }
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Title:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "title",
+        value: "Employee",
+        checked: this.state.title === "Employee",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            title: e.target.value
+          });
+        }
+      }), " Employee"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "title",
+        value: "Manager",
+        checked: this.state.title === "Manager",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            title: e.target.value
+          });
+        }
+      }), " Manager"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "title",
+        value: "Director",
+        checked: this.state.title === "Director",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            title: e.target.value
+          });
+        }
+      }), " Director"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "title",
+        value: "VP",
+        checked: this.state.title === "VP",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            title: e.target.value
+          });
+        }
+      }), " VP"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Department:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "department",
+        value: "IT",
+        checked: this.state.department === "IT",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            department: e.target.value
+          });
+        }
+      }), " IT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "department",
+        value: "Marketing",
+        checked: this.state.department === "Marketing",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            department: e.target.value
+          });
+        }
+      }), " Marketing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "department",
+        value: "HR",
+        checked: this.state.department === "HR",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            department: e.target.value
+          });
+        }
+      }), " HR"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "department",
+        value: "Engineering",
+        checked: this.state.department === "Engineering",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            department: e.target.value
+          });
+        }
+      }), " Engineering"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Employee Type:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        id: "fullTime",
+        name: "employeeType",
+        value: "FullTime",
+        checked: this.state.employeeType === "FullTime",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            employeeType: e.target.value
+          });
+        }
+      }), " Full Time"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        id: "partTime",
+        name: "employeeType",
+        value: "PartTime",
+        checked: this.state.employeeType === "PartTime",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            employeeType: e.target.value
+          });
+        }
+      }), " Part Time"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        id: "contract",
+        name: "employeeType",
+        value: "Contract",
+        checked: this.state.employeeType === "Contract",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            employeeType: e.target.value
+          });
+        }
+      }), " Contract"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        id: "seasonal",
+        name: "employeeType",
+        value: "Seasonal",
+        checked: this.state.employeeType === "Seasonal",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            employeeType: e.target.value
+          });
+        }
+      }), " Seasonal"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+        class: "btn btn-primary",
+        type: "submit"
+      }, "Add Employee"))));
+    }
+  }]);
+}((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
+
+
+/***/ }),
+
+/***/ "./JSX/src/EmployeeTable.jsx":
+/*!***********************************!*\
+  !*** ./JSX/src/EmployeeTable.jsx ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ EmployeeTable)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../App */ "./JSX/App.jsx");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var EmployeeTable = /*#__PURE__*/function (_React$Component) {
+  function EmployeeTable(props) {
+    var _this;
+    _classCallCheck(this, EmployeeTable);
+    _this = _callSuper(this, EmployeeTable, [props]);
+    _this.handleDelete = _this.handleDelete.bind(_this);
+    _this.handleEdit = _this.handleEdit.bind(_this);
+    return _this;
+  }
+
+  // this will the click on edit button
+  _inherits(EmployeeTable, _React$Component);
+  return _createClass(EmployeeTable, [{
+    key: "handleEdit",
+    value: function handleEdit(employee) {
+      this.props.toggleEdit(employee);
+    }
+
+    // this will hanlde the click on delete button
+    // first it will fetch the graphql query
+    // then it will check if employees's current status is active or not, if it is active, it will not allow user to delete that data
+  }, {
+    key: "handleDelete",
+    value: function handleDelete(id, currentStatus) {
+      var _this2 = this;
+      var mutation = "\n          mutation {\n              deleteData(id: \"".concat(id, "\")\n          }\n      ");
+      if (currentStatus != 1) {
+        (0,_App__WEBPACK_IMPORTED_MODULE_2__.graphqlRequest)(mutation).then(function (data) {
+          if (data.deleteData) {
+            // Refresh data or perform any other actions after successful deletion
+            var updatedEmployeeInfo = _this2.props.EmployeeInfo.filter(function (employee) {
+              return employee._id !== id;
+            });
+            // Update the state with the filtered data
+            _this2.props.updateEmployeeInfo(updatedEmployeeInfo);
+            alert("Employee Data Deleted successfully");
+          } else {
+            console.log("deletion failed");
+          }
+        }).catch(function (error) {
+          console.error('Error deleting data:', error);
+        });
+      } else {
+        alert("CAN'T DELETE EMPLOYEE – STATUS ACTIVE");
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+      var EmployeeInfo = this.props.EmployeeInfo;
+      if (EmployeeInfo.length === 0) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "There is no data to Display, Please enter Employee data");
+      } else {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Employee Table"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+          className: "table-responsive"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("table", {
+          className: "table table-striped"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("thead", {
+          className: "thead-dark"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", {
+          class: "table-primary"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "First Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Last Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Age"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Date of Joining"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Department"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Employee Type"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Current Status"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Action"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tbody", null, EmployeeInfo.map(function (employee) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", {
+            class: "table-success",
+            key: employee._id
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.firstName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.lastName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.age), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.dateOfJoining), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.department), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.employeeType), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.currentStatus), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+            to: "/update"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+            className: "btn btn-primary",
+            onClick: function onClick() {
+              _this3.handleEdit(employee);
+            }
+          }, "Edit"), "  "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+            className: "btn btn-danger mr-2",
+            onClick: function onClick() {
+              return _this3.handleDelete(employee._id, employee.currentStatus);
+            }
+          }, "Delete")));
+        })))));
+      }
+    }
+  }]);
+}((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
+
+
+/***/ }),
+
+/***/ "./JSX/src/EmployeeUpdate.jsx":
+/*!************************************!*\
+  !*** ./JSX/src/EmployeeUpdate.jsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ EmployeeUpdate)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+var EmployeeUpdate = /*#__PURE__*/function (_React$Component) {
+  function EmployeeUpdate(props) {
+    var _this;
+    _classCallCheck(this, EmployeeUpdate);
+    _this = _callSuper(this, EmployeeUpdate, [props]);
+    _this.state = {
+      _id: props.employee._id,
+      firstName: props.employee.firstName,
+      lastName: props.employee.lastName,
+      age: props.employee.age,
+      dateOfJoining: props.employee.dateOfJoining,
+      department: props.employee.department,
+      employeeType: props.employee.employeeType,
+      title: props.employee.title,
+      currentStatus: 1
+    };
+    _this.formHandler = _this.formHandler.bind(_this);
+    return _this;
+  }
+  _inherits(EmployeeUpdate, _React$Component);
+  return _createClass(EmployeeUpdate, [{
+    key: "formHandler",
+    value: function formHandler(e) {
+      e.preventDefault();
+      var _this$state = this.state,
+        _id = _this$state._id,
+        firstName = _this$state.firstName,
+        lastName = _this$state.lastName,
+        age = _this$state.age,
+        dateOfJoining = _this$state.dateOfJoining,
+        department = _this$state.department,
+        employeeType = _this$state.employeeType,
+        title = _this$state.title,
+        currentStatus = _this$state.currentStatus;
+
+      // this will check for null valus in any field
+      if (!firstName || !lastName || !dateOfJoining) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      // this will create an object whith updated employee data, entered by user
+      this.props.updateCurrentEmployee({
+        _id: _id,
+        firstName: firstName,
+        lastName: lastName,
+        age: age,
+        dateOfJoining: dateOfJoining,
+        department: department,
+        employeeType: employeeType,
+        title: title,
+        currentStatus: currentStatus
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Edit Employee"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
+        onSubmit: this.formHandler
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        id: "_id",
+        type: "text",
+        value: this.state._id,
+        hidden: true,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            _id: e.target.value
+          });
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        for: "firstName"
+      }, "First Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "text",
+        id: "firstName",
+        class: "form-control",
+        value: this.state.firstName,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            firstName: e.target.value
+          });
+        }
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        for: "lastName"
+      }, "Last Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "text",
+        id: "lastName",
+        class: "form-control",
+        value: this.state.lastName,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            lastName: e.target.value
+          });
+        }
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        for: "age"
+      }, "Age:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "number",
+        id: "age",
+        class: "form-control",
+        value: this.state.age,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            age: parseInt(e.target.value)
+          });
+        },
+        min: "20",
+        max: "70"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        for: "dateOfJoining"
+      }, "Date of Joining:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "text",
+        id: "dateOfJoining",
+        class: "form-control",
+        value: this.state.dateOfJoining,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            dateOfJoining: e.target.value
+          });
+        },
+        disabled: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Title:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        class: "mr-3"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "title",
+        value: "Employee",
+        checked: this.state.title === "Employee",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            title: e.target.value
+          });
+        },
+        class: "mr-1"
+      }), " ", "Employee"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        class: "mr-3"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "title",
+        value: "Manager",
+        checked: this.state.title === "Manager",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            title: e.target.value
+          });
+        },
+        class: "mr-1"
+      }), " ", "Manager"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        class: "mr-3"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "title",
+        value: "Director",
+        checked: this.state.title === "Director",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            title: e.target.value
+          });
+        },
+        class: "mr-1"
+      }), " ", "Director"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "title",
+        value: "VP",
+        checked: this.state.title === "VP",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            title: e.target.value
+          });
+        },
+        class: "mr-1"
+      }), " ", "VP"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Department:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        class: "mr-3"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "department",
+        value: "IT",
+        checked: this.state.department === "IT",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            department: e.target.value
+          });
+        },
+        class: "mr-1"
+      }), " ", "IT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        class: "mr-3"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "department",
+        value: "Marketing",
+        checked: this.state.department === "Marketing",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            department: e.target.value
+          });
+        },
+        class: "mr-1"
+      }), " ", "Marketing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        class: "mr-3"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "department",
+        value: "HR",
+        checked: this.state.department === "HR",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            department: e.target.value
+          });
+        },
+        class: "mr-1"
+      }), " ", "HR"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        name: "department",
+        value: "Engineering",
+        checked: this.state.department === "Engineering",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            department: e.target.value
+          });
+        },
+        class: "mr-1"
+      }), " ", "Engineering"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        class: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Employee Type:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        class: "mr-3"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        id: "fullTime",
+        name: "employeeType",
+        value: "FullTime",
+        checked: this.state.employeeType === "FullTime",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            employeeType: e.target.value
+          });
+        },
+        class: "mr-1"
+      }), " ", "Full Time"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        class: "mr-3"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        id: "partTime",
+        name: "employeeType",
+        value: "PartTime",
+        checked: this.state.employeeType === "PartTime",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            employeeType: e.target.value
+          });
+        },
+        class: "mr-1"
+      }), " ", "Part Time"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        class: "mr-3"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        id: "contract",
+        name: "employeeType",
+        value: "Contract",
+        checked: this.state.employeeType === "Contract",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            employeeType: e.target.value
+          });
+        },
+        class: "mr-1"
+      }), " ", "Contract"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        type: "radio",
+        id: "seasonal",
+        name: "employeeType",
+        value: "Seasonal",
+        checked: this.state.employeeType === "Seasonal",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            employeeType: e.target.value
+          });
+        },
+        class: "mr-1"
+      }), " ", "Seasonal")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "form-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+        htmlFor: "currentStatus"
+      }, "Current Status:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
+        id: "currentStatus",
+        className: "form-control",
+        value: this.state.currentStatus,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            currentStatus: parseInt(e.target.value)
+          });
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+        value: 1
+      }, "Active"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+        value: 0
+      }, "Retired")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+        type: "submit",
+        class: "btn btn-primary"
+      }, "Update Employee")));
+    }
+  }]);
+}((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
+
+
+/***/ }),
+
+/***/ "./JSX/src/UpcomingRetirementTable.jsx":
+/*!*********************************************!*\
+  !*** ./JSX/src/UpcomingRetirementTable.jsx ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ UpcomingRetirementTable)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+// this component will show the employees whoes retirment is comming soon
+var UpcomingRetirementTable = /*#__PURE__*/function (_React$Component) {
+  function UpcomingRetirementTable(props) {
+    var _this;
+    _classCallCheck(this, UpcomingRetirementTable);
+    _this = _callSuper(this, UpcomingRetirementTable, [props]);
+    _this.handleDelete = _this.handleDelete.bind(_this);
+    _this.handleEdit = _this.handleEdit.bind(_this);
+    return _this;
+  }
+
+  // this funtion will be handling the click on Edit button
+  _inherits(UpcomingRetirementTable, _React$Component);
+  return _createClass(UpcomingRetirementTable, [{
+    key: "handleEdit",
+    value: function handleEdit(employee) {
+      this.props.toggleEdit(employee);
+    }
+
+    // this funtion whill fetch the grapql query and delete the data of employee on which the user has clicked
+    // it uses the id of employee to delete the correct employee data
+    // also it chekc if the employee's current status is active , then it will not let user delete the data of that employee
+  }, {
+    key: "handleDelete",
+    value: function handleDelete(id, currentStatus) {
+      var _this2 = this;
+      var mutation = "\n          mutation {\n              deleteData(id: \"".concat(id, "\")\n          }\n      ");
+      if (currentStatus != 1) {
+        graphqlRequest(mutation).then(function (data) {
+          if (data.deleteData) {
+            // to update table after deletion
+            var updatedEmployeeInfo = _this2.props.EmployeeInfo.filter(function (employee) {
+              return employee._id !== id;
+            });
+            // Update the state with the filtered data
+            //   this will be used to update table data after deletion
+            _this2.props.updateEmployeeInfo(updatedEmployeeInfo);
+
+            //   this will show an alert if employee data is deleted successfully
+            alert("Employee Data Deleted successfully");
+          } else {
+            // Handle deletion failure
+          }
+        }).catch(function (error) {
+          console.error('Error deleting data:', error);
+        });
+      } else {
+        // this will show an alert when user trys to delete data of an active employee
+        alert("CAN'T DELETE EMPLOYEE – STATUS ACTIVE");
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+      // this will get data of all the employees
+      var EmployeeInfo = this.props.EmployeeInfo;
+
+      // this will fillter out the data of employees whoes age is 64 or greater, so it can be displyed in Upcoming retirement table
+      var retiringEmployees = EmployeeInfo.filter(function (employee) {
+        return employee.age >= 64;
+      });
+      if (retiringEmployees.length === 0) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "No upcoming retirement found.");
+      } else {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Upcoming Retirement Table"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+          className: "table-responsive"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("table", {
+          className: "table table-striped"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("thead", {
+          className: "thead-dark"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", {
+          class: "table-primary"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "First Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Last Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Age"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Date of Joining"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Department"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Employee Type"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Current Status"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Action"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tbody", null, retiringEmployees.map(function (employee) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", {
+            class: "table-success",
+            key: employee._id
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.firstName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.lastName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.age), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.dateOfJoining), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.department), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.employeeType), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, employee.currentStatus), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+            to: "/update"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+            className: "btn btn-primary",
+            onClick: function onClick() {
+              _this3.handleEdit(employee);
+            }
+          }, "Edit"), "  "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+            className: "btn btn-danger mr-2",
+            onClick: function onClick() {
+              return _this3.props.handleDelete(employee._id, employee.currentStatus);
+            }
+          }, "Delete")));
+        })))));
+      }
+    }
+  }]);
+}((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
+
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%272%27 fill=%27%23fff%27/%3e%3c/svg%3e":
+/*!******************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%272%27 fill=%27%23fff%27/%3e%3c/svg%3e ***!
+  \******************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%272%27 fill=%27%23fff%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%2386b7fe%27/%3e%3c/svg%3e":
+/*!*********************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%2386b7fe%27/%3e%3c/svg%3e ***!
+  \*********************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%2386b7fe%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%23fff%27/%3e%3c/svg%3e":
+/*!******************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%23fff%27/%3e%3c/svg%3e ***!
+  \******************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27%23fff%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%280, 0, 0, 0.25%29%27/%3e%3c/svg%3e":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%280, 0, 0, 0.25%29%27/%3e%3c/svg%3e ***!
+  \***********************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%280, 0, 0, 0.25%29%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 0.25%29%27/%3e%3c/svg%3e":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 0.25%29%27/%3e%3c/svg%3e ***!
+  \*****************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%28255, 255, 255, 0.25%29%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 12 12%27 width=%2712%27 height=%2712%27 fill=%27none%27 stroke=%27%23dc3545%27%3e%3ccircle cx=%276%27 cy=%276%27 r=%274.5%27/%3e%3cpath stroke-linejoin=%27round%27 d=%27M5.8 3.6h.4L6 6.5z%27/%3e%3ccircle cx=%276%27 cy=%278.2%27 r=%27.6%27 fill=%27%23dc3545%27 stroke=%27none%27/%3e%3c/svg%3e":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 12 12%27 width=%2712%27 height=%2712%27 fill=%27none%27 stroke=%27%23dc3545%27%3e%3ccircle cx=%276%27 cy=%276%27 r=%274.5%27/%3e%3cpath stroke-linejoin=%27round%27 d=%27M5.8 3.6h.4L6 6.5z%27/%3e%3ccircle cx=%276%27 cy=%278.2%27 r=%27.6%27 fill=%27%23dc3545%27 stroke=%27none%27/%3e%3c/svg%3e ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 12 12%27 width=%2712%27 height=%2712%27 fill=%27none%27 stroke=%27%23dc3545%27%3e%3ccircle cx=%276%27 cy=%276%27 r=%274.5%27/%3e%3cpath stroke-linejoin=%27round%27 d=%27M5.8 3.6h.4L6 6.5z%27/%3e%3ccircle cx=%276%27 cy=%278.2%27 r=%27.6%27 fill=%27%23dc3545%27 stroke=%27none%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23000%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23000%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23000%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%236ea8fe%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%236ea8fe%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%236ea8fe%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3e%3cpath d=%27M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z%27/%3e%3c/svg%3e":
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3e%3cpath d=%27M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z%27/%3e%3c/svg%3e ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3e%3cpath d=%27M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3e%3cpath d=%27M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e":
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3e%3cpath d=%27M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3e%3cpath d=%27M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%23052c65%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%23052c65%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%23052c65%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%23212529%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%23212529%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%23212529%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23343a40%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m2 5 6 6 6-6%27/%3e%3c/svg%3e":
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23343a40%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m2 5 6 6 6-6%27/%3e%3c/svg%3e ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23343a40%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m2 5 6 6 6-6%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23dee2e6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m2 5 6 6 6-6%27/%3e%3c/svg%3e":
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23dee2e6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m2 5 6 6 6-6%27/%3e%3c/svg%3e ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23dee2e6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m2 5 6 6 6-6%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27M6 10h8%27/%3e%3c/svg%3e":
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27M6 10h8%27/%3e%3c/svg%3e ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27M6 10h8%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27m6 10 3 3 6-6%27/%3e%3c/svg%3e":
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27m6 10 3 3 6-6%27/%3e%3c/svg%3e ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27m6 10 3 3 6-6%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 0.55%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e":
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 0.55%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 0.55%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%2833, 37, 41, 0.75%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e":
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%2833, 37, 41, 0.75%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%2833, 37, 41, 0.75%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 8%27%3e%3cpath fill=%27%23198754%27 d=%27M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z%27/%3e%3c/svg%3e":
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 8%27%3e%3cpath fill=%27%23198754%27 d=%27M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z%27/%3e%3c/svg%3e ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 8%27%3e%3cpath fill=%27%23198754%27 d=%27M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z%27/%3e%3c/svg%3e";
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/create fake namespace object */
+/******/ 	(() => {
+/******/ 		var getProto = Object.getPrototypeOf ? (obj) => (Object.getPrototypeOf(obj)) : (obj) => (obj.__proto__);
+/******/ 		var leafPrototypes;
+/******/ 		// create a fake namespace object
+/******/ 		// mode & 1: value is a module id, require it
+/******/ 		// mode & 2: merge all properties of value into the ns
+/******/ 		// mode & 4: return value when already ns object
+/******/ 		// mode & 16: return value when it's Promise-like
+/******/ 		// mode & 8|1: behave like require
+/******/ 		__webpack_require__.t = function(value, mode) {
+/******/ 			if(mode & 1) value = this(value);
+/******/ 			if(mode & 8) return value;
+/******/ 			if(typeof value === 'object' && value) {
+/******/ 				if((mode & 4) && value.__esModule) return value;
+/******/ 				if((mode & 16) && typeof value.then === 'function') return value;
+/******/ 			}
+/******/ 			var ns = Object.create(null);
+/******/ 			__webpack_require__.r(ns);
+/******/ 			var def = {};
+/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
+/******/ 			for(var current = mode & 2 && value; typeof current == 'object' && !~leafPrototypes.indexOf(current); current = getProto(current)) {
+/******/ 				Object.getOwnPropertyNames(current).forEach((key) => (def[key] = () => (value[key])));
+/******/ 			}
+/******/ 			def['default'] = () => (value);
+/******/ 			__webpack_require__.d(ns, def);
+/******/ 			return ns;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"app": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunkGroup1_Project"] = self["webpackChunkGroup1_Project"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendor"], () => (__webpack_require__("./JSX/app.jsx")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
 //# sourceMappingURL=app.bundle.js.map

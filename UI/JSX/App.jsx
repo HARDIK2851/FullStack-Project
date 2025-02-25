@@ -9,7 +9,7 @@ import EmployeeUpdate from './src/EmployeeUpdate';
 import UpcomingRetirementTable from './src/UpcomingRetirementTable';
 
 // this function will send an graphql request
-function graphqlRequest(queryString, variableValue = {}) {
+export function graphqlRequest(queryString, variableValue = {}) {
   return fetch("http://localhost:4000/graphql", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -110,7 +110,7 @@ class EmployeeDirectory extends React.Component {
     });
   }
 
-  // this function will be called when user presses the update employee button in EmployeeUpdate Component after filling all feilds
+  // this function will be called when user presses the update employee button in EmployeeUpdate Component after filling all feilds 
   updateEmployeeData(empdata) {
     const empInfo = { ...empdata };
     console.log(empdata);
@@ -130,27 +130,15 @@ class EmployeeDirectory extends React.Component {
       }
     }`;
 
-    graphqlRequest(query, empdata).then((resultAdded) => {
-    try {
-      // this will update the state of the component
+    this.updateEmployee(query, empInfo).then((resultAdded) => {
       this.setState({
-        updatedEmployeeData: [
-          ...this.state.updatedEmployeeData,
-          { ...resultAdded.updateDataIntoMongoDB },
+        employeeData: [
+          ...this.state.employeeData,
+          { ...resultAdded.insertData },
         ],
       });
       alert(`Data Updated Successfully.`);
-    } catch (error) {
-      // Handle any errors that occur during state update
-      console.error('Error updating state:', error);
-      alert('An error occurred while updating employee data.'+empInfo);
-    }
-  })
-  .catch((error) => {
-    // Handle errors from the updateEmployee function
-    console.error('Error updating employee data:', error);
-    alert('An error occurred while updating employee data.');
-  });
+    });
 }
 
 
@@ -161,7 +149,7 @@ class EmployeeDirectory extends React.Component {
   updateEmployee(query, result) {
     return graphqlRequest(query, { result });
   }
-a
+  
   updateEmployeeInfo(updatedData) {
     this.setState({ employeeData: updatedData });
 }
