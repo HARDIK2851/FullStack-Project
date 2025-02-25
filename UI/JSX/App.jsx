@@ -9,7 +9,7 @@ import EmployeeUpdate from './src/EmployeeUpdate';
 import UpcomingRetirementTable from './src/UpcomingRetirementTable';
 
 // this function will send an graphql request
-function graphqlRequest(queryString, variableValue = {}) {
+export function graphqlRequest(queryString, variableValue = {}) {
   return fetch("http://localhost:4000/graphql", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

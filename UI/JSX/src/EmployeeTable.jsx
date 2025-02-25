@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route,Routes, Link } from 'react-router-dom';
-
+import { graphqlRequest } from '../App';
 export default class EmployeeTable extends React.Component {
     constructor(props) {
       super(props);
