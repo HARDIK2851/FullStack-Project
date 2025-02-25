@@ -150,22 +150,11 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
       console.log(empdata);
       delete empdata.validateField;
       var query = "\n    mutation updateDataIntoMongoDB($result: inputUpdatedTypeEmp!) {\n      updateDataIntoMongoDB(result: $result) {\n        _id\n        lastName\n        firstName\n        age\n        dateOfJoining\n        title\n        department\n        employeeType\n        currentStatus\n      }\n    }";
-      graphqlRequest(query, empdata).then(function (resultAdded) {
-        try {
-          // this will update the state of the component
-          _this4.setState({
-            updatedEmployeeData: [].concat(_toConsumableArray(_this4.state.updatedEmployeeData), [_objectSpread({}, resultAdded.updateDataIntoMongoDB)])
-          });
-          alert("Data Updated Successfully.");
-        } catch (error) {
-          // Handle any errors that occur during state update
-          console.error('Error updating state:', error);
-          alert('An error occurred while updating employee data.' + empInfo);
-        }
-      }).catch(function (error) {
-        // Handle errors from the updateEmployee function
-        console.error('Error updating employee data:', error);
-        alert('An error occurred while updating employee data.');
+      this.updateEmployee(query, empInfo).then(function (resultAdded) {
+        _this4.setState({
+          employeeData: [].concat(_toConsumableArray(_this4.state.employeeData), [_objectSpread({}, resultAdded.insertData)])
+        });
+        alert("Data Updated Successfully.");
       });
     }
   }, {
@@ -309,9 +298,12 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
@@ -319,9 +311,6 @@ function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 //this class will create a component to enter employee details with some predefine values
 
 
@@ -372,7 +361,6 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
     var _this;
     _classCallCheck(this, EmployeeDirectory);
     _this = _callSuper(this, EmployeeDirectory);
-    _defineProperty(_this, "a", void 0);
     _this.state = {
       employeeData: [],
       updatedEmployeeData: [],
@@ -420,7 +408,7 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
       });
     }
 
-    // this function will be called when user presses the update employee button in EmployeeUpdate Component after filling all feilds
+    // this function will be called when user presses the update employee button in EmployeeUpdate Component after filling all feilds 
   }, {
     key: "updateEmployeeData",
     value: function updateEmployeeData(empdata) {
@@ -429,22 +417,11 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
       console.log(empdata);
       delete empdata.validateField;
       var query = "\n    mutation updateDataIntoMongoDB($result: inputUpdatedTypeEmp!) {\n      updateDataIntoMongoDB(result: $result) {\n        _id\n        lastName\n        firstName\n        age\n        dateOfJoining\n        title\n        department\n        employeeType\n        currentStatus\n      }\n    }";
-      graphqlRequest(query, empdata).then(function (resultAdded) {
-        try {
-          // this will update the state of the component
-          _this4.setState({
-            updatedEmployeeData: [].concat(_toConsumableArray(_this4.state.updatedEmployeeData), [_objectSpread({}, resultAdded.updateDataIntoMongoDB)])
-          });
-          alert("Data Updated Successfully.");
-        } catch (error) {
-          // Handle any errors that occur during state update
-          console.error('Error updating state:', error);
-          alert('An error occurred while updating employee data.' + empInfo);
-        }
-      }).catch(function (error) {
-        // Handle errors from the updateEmployee function
-        console.error('Error updating employee data:', error);
-        alert('An error occurred while updating employee data.');
+      this.updateEmployee(query, empInfo).then(function (resultAdded) {
+        _this4.setState({
+          employeeData: [].concat(_toConsumableArray(_this4.state.employeeData), [_objectSpread({}, resultAdded.insertData)])
+        });
+        alert("Data Updated Successfully.");
       });
     }
   }, {

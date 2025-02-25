@@ -130,27 +130,15 @@ class EmployeeDirectory extends React.Component {
       }
     }`;
 
-    graphqlRequest(query, empdata).then((resultAdded) => {
-    try {
-      // this will update the state of the component
+    this.updateEmployee(query, empInfo).then((resultAdded) => {
       this.setState({
-        updatedEmployeeData: [
-          ...this.state.updatedEmployeeData,
-          { ...resultAdded.updateDataIntoMongoDB },
+        employeeData: [
+          ...this.state.employeeData,
+          { ...resultAdded.insertData },
         ],
       });
       alert(`Data Updated Successfully.`);
-    } catch (error) {
-      // Handle any errors that occur during state update
-      console.error('Error updating state:', error);
-      alert('An error occurred while updating employee data.'+empInfo);
-    }
-  })
-  .catch((error) => {
-    // Handle errors from the updateEmployee function
-    console.error('Error updating employee data:', error);
-    alert('An error occurred while updating employee data.');
-  });
+    });
 }
 
 
