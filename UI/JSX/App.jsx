@@ -172,14 +172,14 @@ toggleEdit(employee) {
           {/* this is the navbar created with help of bootstrap to make it look good */}
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <div className="container">
-              <Link className="navbar-brand font-weight-bold" to="/">Create Employee</Link>
+              <Link className="navbar-brand font-weight-bold" to="/create">Create Employee</Link>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <Link className="nav-link font-weight-bold" to="/table">Employee Table</Link>
+                    <Link className="nav-link font-weight-bold" to="/">Employee Table</Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link font-weight-bold" to="/retiringEmployeeTable">Upcoming Retirements</Link>
@@ -196,7 +196,7 @@ toggleEdit(employee) {
             {/* this route is for EmployeeCreate component */}
           <Route
             exact
-            path="/"
+            path="/create"
             element={
               <EmployeeCreate
               insertEmp={this.addEmployeeData}
@@ -205,7 +205,7 @@ toggleEdit(employee) {
           />
           {/* this route is for EmployeeTable component */}
           <Route
-            path="/table"
+            path="/"
             element={
               <EmployeeTable
               EmployeeInfo={this.state.employeeData}

@@ -201,7 +201,7 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
         className: "container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
         className: "navbar-brand font-weight-bold",
-        to: "/"
+        to: "/create"
       }, "Create Employee"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
         className: "navbar-toggler",
         type: "button",
@@ -221,7 +221,7 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
         className: "nav-item"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
         className: "nav-link font-weight-bold",
-        to: "/table"
+        to: "/"
       }, "Employee Table")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
         className: "nav-item"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
@@ -229,12 +229,12 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
         to: "/retiringEmployeeTable"
       }, "Upcoming Retirements")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
         exact: true,
-        path: "/",
+        path: "/create",
         element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_EmployeeCreate__WEBPACK_IMPORTED_MODULE_3__["default"], {
           insertEmp: this.addEmployeeData
         })
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
-        path: "/table",
+        path: "/",
         element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_EmployeeTable__WEBPACK_IMPORTED_MODULE_4__["default"], {
           EmployeeInfo: this.state.employeeData,
           updateEmployeeInfo: this.updateEmployeeInfo,
@@ -468,7 +468,7 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
         className: "container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
         className: "navbar-brand font-weight-bold",
-        to: "/"
+        to: "/create"
       }, "Create Employee"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
         className: "navbar-toggler",
         type: "button",
@@ -488,7 +488,7 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
         className: "nav-item"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
         className: "nav-link font-weight-bold",
-        to: "/table"
+        to: "/"
       }, "Employee Table")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
         className: "nav-item"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
@@ -496,12 +496,12 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
         to: "/retiringEmployeeTable"
       }, "Upcoming Retirements")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
         exact: true,
-        path: "/",
+        path: "/create",
         element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_EmployeeCreate__WEBPACK_IMPORTED_MODULE_3__["default"], {
           insertEmp: this.addEmployeeData
         })
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
-        path: "/table",
+        path: "/",
         element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_EmployeeTable__WEBPACK_IMPORTED_MODULE_4__["default"], {
           EmployeeInfo: this.state.employeeData,
           updateEmployeeInfo: this.updateEmployeeInfo,
