@@ -74,7 +74,7 @@ function graphqlRequest(queryString) {
     }
     return dbData.data;
   }).catch(function (e) {
-    alert("Error in processing request: ".concat(e.message));
+    alert("Error: ".concat(e.message));
   });
 }
 // this will show erro if there is any
@@ -130,7 +130,8 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
     value: function addEmployeeData(employee) {
       var _this3 = this;
       var empInfo = _objectSpread({}, employee);
-      empInfo.dateOfJoining = new Date(empInfo.dateOfJoining).toISOString();
+      var date = new Date(empInfo.dateOfJoining);
+      empInfo.dateOfJoining = date.toISOString().split('T')[0];
       delete empInfo.validateField;
       var updateQuery = "\n        mutation insertData($result: inputTypeEmp)\n        {\n         insertData(result: $result)\n          {\n           _id  \n           currentStatus\n           age\n           department\n           dateOfJoining\n           employeeType\n           firstName\n           lastName\n           title\n         }\n       }";
       this.addEmployee(updateQuery, empInfo).then(function (resultAdded) {
@@ -152,7 +153,7 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
       var query = "\n    mutation updateDataIntoMongoDB($result: inputUpdatedTypeEmp!) {\n      updateDataIntoMongoDB(result: $result) {\n        _id\n        lastName\n        firstName\n        age\n        dateOfJoining\n        title\n        department\n        employeeType\n        currentStatus\n      }\n    }";
       this.updateEmployee(query, empInfo).then(function (resultAdded) {
         _this4.setState({
-          employeeData: [].concat(_toConsumableArray(_this4.state.employeeData), [_objectSpread({}, resultAdded.insertData)])
+          employeeData: [].concat(_toConsumableArray(_this4.state.employeeData), [_objectSpread({}, resultAdded.updateDataIntoMongoDB)])
         });
         alert("Data Updated Successfully.");
       });
@@ -341,7 +342,7 @@ function graphqlRequest(queryString) {
     }
     return dbData.data;
   }).catch(function (e) {
-    alert("Error in processing request: ".concat(e.message));
+    alert("Error: ".concat(e.message));
   });
 }
 // this will show erro if there is any
@@ -397,7 +398,8 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
     value: function addEmployeeData(employee) {
       var _this3 = this;
       var empInfo = _objectSpread({}, employee);
-      empInfo.dateOfJoining = new Date(empInfo.dateOfJoining).toISOString();
+      var date = new Date(empInfo.dateOfJoining);
+      empInfo.dateOfJoining = date.toISOString().split('T')[0];
       delete empInfo.validateField;
       var updateQuery = "\n        mutation insertData($result: inputTypeEmp)\n        {\n         insertData(result: $result)\n          {\n           _id  \n           currentStatus\n           age\n           department\n           dateOfJoining\n           employeeType\n           firstName\n           lastName\n           title\n         }\n       }";
       this.addEmployee(updateQuery, empInfo).then(function (resultAdded) {
@@ -419,7 +421,7 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
       var query = "\n    mutation updateDataIntoMongoDB($result: inputUpdatedTypeEmp!) {\n      updateDataIntoMongoDB(result: $result) {\n        _id\n        lastName\n        firstName\n        age\n        dateOfJoining\n        title\n        department\n        employeeType\n        currentStatus\n      }\n    }";
       this.updateEmployee(query, empInfo).then(function (resultAdded) {
         _this4.setState({
-          employeeData: [].concat(_toConsumableArray(_this4.state.employeeData), [_objectSpread({}, resultAdded.insertData)])
+          employeeData: [].concat(_toConsumableArray(_this4.state.employeeData), [_objectSpread({}, resultAdded.updateDataIntoMongoDB)])
         });
         alert("Data Updated Successfully.");
       });

@@ -23,7 +23,7 @@ export function graphqlRequest(queryString, variableValue = {}) {
       return dbData.data;
     })
     .catch((e) => {
-      alert(`Error in processing request: ${e.message}`);
+      alert(`Error: ${e.message}`);
     });
 }
 // this will show erro if there is any
@@ -80,7 +80,8 @@ class EmployeeDirectory extends React.Component {
 
   addEmployeeData(employee) {
     const empInfo = { ...employee };
-    empInfo.dateOfJoining = new Date(empInfo.dateOfJoining).toISOString();
+    const date = new Date(empInfo.dateOfJoining);
+    empInfo.dateOfJoining = date.toISOString().split('T')[0];
     delete empInfo.validateField;
 
     const updateQuery = `
@@ -134,7 +135,7 @@ class EmployeeDirectory extends React.Component {
       this.setState({
         employeeData: [
           ...this.state.employeeData,
-          { ...resultAdded.insertData },
+          { ...resultAdded.updateDataIntoMongoDB },
         ],
       });
       alert(`Data Updated Successfully.`);

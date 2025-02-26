@@ -83,7 +83,7 @@ const resolvers = {
         },
         updateDataIntoMongoDB: async (_, { result }) => {
             // Call the function to update employee data in MongoDB
-            return await updateDataIntoMongoDB(result);
+            return await updateDataIntoMongoDB (result);
         },
     },
 }

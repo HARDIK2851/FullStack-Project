@@ -69,11 +69,6 @@ async function updateDataIntoMongoDB(updatedEmployee) {
 
         const result = await db.collection("employees").findOneAndUpdate(filter, update, options);
 
-        if (!result.value) {
-            console.error(`Error: Employee with ID ${_id} not found or not updated. ${JSON.stringify(updatedEmployee)}`);
-            return null;
-        }
-
         return result.value; // Return updated employee data
     } catch (error) {
         console.error("Error updating data into MongoDB:", error);
