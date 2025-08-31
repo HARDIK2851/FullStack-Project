@@ -13,3 +13,13 @@ Features
 ❌ Remove Employees – Delete employees from the system.
 
 🎯 Upcoming Retirements – View a separate table of employees reaching retirement age within 1 year.
+
+Tech Stack
+
+Frontend: React
+
+Backend: Apollo Server (Node.js + GraphQL)
+
+Database: MongoDB
+
+API Communication: GraphQL Queries & Mutations
